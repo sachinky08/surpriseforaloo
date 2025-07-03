@@ -1,0 +1,138 @@
+.video-page {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    overflow: hidden;
+    padding: 1rem;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, #111827, #1e3a8a, #ec4899);
+    background-size: 300% 300%;
+    animation: bgShift 10s ease-in-out infinite;
+    z-index: 1;
+}
+
+@keyframes bgShift {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 700px;
+    width: 100%;
+    padding: 2rem 1rem;
+}
+
+/* Heading section */
+.heading-section {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 1.8rem;
+    border-radius: 16px;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.main-heading {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+    line-height: 1.4;
+    color: #fcd34d;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.sub-text {
+    font-size: 1.1rem;
+    color: #e5e7eb;
+    font-style: italic;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* Video styling */
+.video-wrapper {
+    max-width: 350px;
+    margin: 0 auto 20px;
+    aspect-ratio: 9 / 16;
+    border-radius: 24px;
+    overflow: hidden;
+    background: black;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.4s ease;
+}
+
+.video-wrapper:hover {
+    transform: scale(1.02);
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+/* Controls */
+.controls {
+    margin: 20px 0;
+}
+
+.play-btn {
+    font-size: 2.2rem;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    cursor: pointer;
+    color: white;
+    backdrop-filter: blur(6px);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.play-btn:hover {
+    transform: scale(1.15);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Continue Button */
+.continue-btn {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 14px 36px;
+    background: #fcd34d;
+    color: #1f2937;
+    font-weight: 600;
+    font-size: 1.05rem;
+    text-decoration: none;
+    border-radius: 40px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 24px rgba(255, 255, 255, 0.2);
+}
+
+.continue-btn:hover {
+    background: #fbbf24;
+    transform: translateY(-2px);
+    color: #111827;
+}
