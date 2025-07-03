@@ -46,7 +46,7 @@ export default function CountdownPage() {
         }
 
         // Target date: July 1st, 2025 at 6:50 PM UTC
-        const targetDate = new Date("2025-07-01T13:57:00Z")
+        const targetDate = new Date("2025-07-09T18:30:00Z");
 
         const difference = targetDate.getTime() - currentTime.getTime()
 
@@ -85,7 +85,14 @@ export default function CountdownPage() {
       <style jsx>{`
         .countdown-container {
           min-height: 100vh;
-          background: linear-gradient(135deg, #00b894 0%, #00cec9 25%, #55a3ff 50%, #74b9ff 75%, #a29bfe 100%);
+          background: linear-gradient(
+            135deg,
+            #00b894 0%,
+            #00cec9 25%,
+            #55a3ff 50%,
+            #74b9ff 75%,
+            #a29bfe 100%
+          );
           background-size: 400% 400%;
           animation: gradientShift 15s ease infinite;
           display: flex;
@@ -127,7 +134,8 @@ export default function CountdownPage() {
           padding: clamp(2rem, 5vw, 4rem);
           border-radius: 30px;
           border: 1px solid rgba(255, 255, 255, 0.1);
-          box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+          box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1),
+            inset 0 1px 0 rgba(255, 255, 255, 0.1);
           max-width: 95%;
           width: 100%;
           max-width: 900px;
@@ -313,13 +321,20 @@ export default function CountdownPage() {
         }
 
         @keyframes gradientShift {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
         }
-        
+
         @keyframes float {
-          0%, 100% {
+          0%,
+          100% {
             transform: translateY(0px) rotate(0deg);
             opacity: 0.7;
           }
@@ -328,9 +343,10 @@ export default function CountdownPage() {
             opacity: 1;
           }
         }
-        
+
         @keyframes heartFloat {
-          0%, 100% {
+          0%,
+          100% {
             transform: translateY(0px) rotate(0deg) scale(1);
             opacity: 0.8;
           }
@@ -347,15 +363,23 @@ export default function CountdownPage() {
             opacity: 1;
           }
         }
-        
+
         @keyframes fadeIn {
-          from { opacity: 0; }
-          to { opacity: 1; }
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
         }
-        
+
         @keyframes spin {
-          0% { transform: rotate(0deg); }
-          100% { transform: rotate(360deg); }
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
         }
 
         /* Mobile specific adjustments */
@@ -364,7 +388,7 @@ export default function CountdownPage() {
             grid-template-columns: repeat(2, 1fr);
             gap: 1rem;
           }
-          
+
           .countdown-content {
             margin: 0.5rem;
           }
@@ -375,7 +399,7 @@ export default function CountdownPage() {
             grid-template-columns: repeat(2, 1fr);
             gap: 0.8rem;
           }
-          
+
           .time-unit {
             min-width: 70px;
           }
@@ -386,7 +410,7 @@ export default function CountdownPage() {
           .countdown-content {
             padding: 5rem;
           }
-          
+
           .timer-grid {
             gap: 3rem;
           }
@@ -415,32 +439,92 @@ export default function CountdownPage() {
 
         {/* Floating Hearts */}
         <div className="particles-background">
-          <div className="heart" style={{ top: "10%", left: "10%", fontSize: "2.5rem", animationDelay: "0s" }}>
+          <div
+            className="heart"
+            style={{
+              top: "10%",
+              left: "10%",
+              fontSize: "2.5rem",
+              animationDelay: "0s",
+            }}
+          >
             💖
           </div>
-          <div className="heart" style={{ top: "20%", right: "15%", fontSize: "2rem", animationDelay: "1s" }}>
+          <div
+            className="heart"
+            style={{
+              top: "20%",
+              right: "15%",
+              fontSize: "2rem",
+              animationDelay: "1s",
+            }}
+          >
             💕
           </div>
-          <div className="heart" style={{ bottom: "30%", left: "20%", fontSize: "3rem", animationDelay: "2s" }}>
+          <div
+            className="heart"
+            style={{
+              bottom: "30%",
+              left: "20%",
+              fontSize: "3rem",
+              animationDelay: "2s",
+            }}
+          >
             💗
           </div>
-          <div className="heart" style={{ bottom: "20%", right: "10%", fontSize: "2rem", animationDelay: "3s" }}>
+          <div
+            className="heart"
+            style={{
+              bottom: "20%",
+              right: "10%",
+              fontSize: "2rem",
+              animationDelay: "3s",
+            }}
+          >
             💖
           </div>
-          <div className="heart" style={{ top: "50%", left: "50%", fontSize: "2.5rem", animationDelay: "4s" }}>
+          <div
+            className="heart"
+            style={{
+              top: "50%",
+              left: "50%",
+              fontSize: "2.5rem",
+              animationDelay: "4s",
+            }}
+          >
             💕
           </div>
-          <div className="heart" style={{ top: "30%", right: "25%", fontSize: "1.8rem", animationDelay: "5s" }}>
+          <div
+            className="heart"
+            style={{
+              top: "30%",
+              right: "25%",
+              fontSize: "1.8rem",
+              animationDelay: "5s",
+            }}
+          >
             💝
           </div>
-          <div className="heart" style={{ bottom: "40%", left: "15%", fontSize: "2.2rem", animationDelay: "6s" }}>
+          <div
+            className="heart"
+            style={{
+              bottom: "40%",
+              left: "15%",
+              fontSize: "2.2rem",
+              animationDelay: "6s",
+            }}
+          >
             💘
           </div>
         </div>
 
         <div className="countdown-content">
-          <h1 className="countdown-title">Until Your Special Moment</h1>
-          <p className="countdown-subtitle">Every second brings us closer to celebrating you</p>
+          <h1 className="countdown-title">
+            Until Your Special Moment, Aloo❤️{" "}
+          </h1>
+          <p className="countdown-subtitle">
+            Every second brings us closer to celebrating you
+          </p>
 
           {loading ? (
             <div className="loading-container">
@@ -468,7 +552,10 @@ export default function CountdownPage() {
                 </div>
               </div>
 
-              <button className="show-button" onClick={() => setShowModal(true)}>
+              <button
+                className="show-button"
+                onClick={() => setShowModal(true)}
+              >
                 Show Anyhow
               </button>
             </>
@@ -478,12 +565,15 @@ export default function CountdownPage() {
         {showModal && (
           <div className="modal-overlay" onClick={() => setShowModal(false)}>
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-              <h2 className="modal-title">Patience, My Beautiful Love</h2>
+              <h2 className="modal-title">Aise kaise meri jaan💕</h2>
               <p className="modal-text">
-                The most precious moments are worth waiting for. Your special surprise has been crafted with love, and
-                every second of anticipation makes it even more meaningful. Trust in the magic of perfect timing.
+                I literally waited a month to open a letter jo maikbhi bhi khol
+                sakta tha aur tum {timeLeft.days} din bhi nahi rukogi?🥹
               </p>
-              <button className="modal-button" onClick={() => setShowModal(false)}>
+              <button
+                className="modal-button"
+                onClick={() => setShowModal(false)}
+              >
                 I'll Wait With Love
               </button>
             </div>
@@ -491,5 +581,5 @@ export default function CountdownPage() {
         )}
       </div>
     </>
-  )
+  );
 }
