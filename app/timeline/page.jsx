@@ -10,98 +10,97 @@ export default function TimelinePage() {
 
   const timelineSteps = [
     {
-      title: "Tuition Days – The First Spark 💫",
+      title: "Tuition Days – Where It All Began 🌼",
       icon: "🌱",
       content:
-        "It all began in Class 9 at a nearby tuition center. That’s where I saw you for the first time. You were cheerful, talkative, and effortlessly lively. Your presence had a strange pull. By Class 10, those little glances turned into deep feelings. One day, silently, I gave you my number, hoping you’d somehow understand what I felt without saying a word. I was nervous, but hopeful.",
+        "Class 9 tuition was where I first saw you—full of life, effortlessly charming. By Class 10, I had already fallen for you. I gave you my number one day, silently hoping you’d feel what I felt.",
     },
     {
-      title: "Balcony Goodbye – Forced Silence 💔",
+      title: "Balcony Goodbye – The Pause 💔",
       icon: "🚪",
       content:
-        "But fate had its plans. Your mom found out about us. Suddenly, everything came crashing down. We were kept apart, no calls, no messages. The last time I saw you that year, we stood on a balcony outside tuition—just a few words, a glance, and then… silence. That balcony moment stayed with me for years. It was the end of a beginning.",
+        "Your mom found out, and we were asked to stop talking. Our last moment was outside tuition, on a balcony—just a glance, a smile, and silence that lasted for months.",
     },
     {
-      title: "Lockdown Years – Longing in Silence 📵",
+      title: "Lockdown – Quiet Longing 📵",
       icon: "🕰️",
       content:
-        "The world went into lockdown, but my heart remained wide open—for you. Days passed, months passed, and I couldn’t stop thinking about you. I tried everything just to hear your voice—fake numbers, alternate ways—nothing worked. But you were always there, living in my thoughts, my memories, my dreams. I missed you every day.",
+        "Even in the chaos of lockdown, you stayed in my heart. I missed your voice, your presence. I tried many ways just to hear from you, but you remained a beautiful memory in my thoughts.",
     },
     {
-      title: "Reconnected on Instagram 🔁",
+      title: "Reconnecting on Instagram 🔁",
       icon: "📱",
       content:
-        "One day, Jayita gave me your Instagram ID. I messaged you, not knowing what to expect. You replied. Then you called. And when I heard your voice after so long—I was overwhelmed. It felt like life had hit the un-pause button. I was nervous, but alive again.",
+        "Thanks to Jayita, I got your Insta. You replied, and later called. Just hearing your voice again felt like something inside me lit up again.",
     },
     {
-      title: "Just to See You 🎯",
+      title: "Glances from Afar 🎯",
       icon: "👀",
       content:
-        "Even though we weren’t talking regularly, I started going to your tuition center again—just to see you from a distance. Sometimes you noticed, sometimes you didn’t. But that small glimpse of you meant the world to me. I didn't even need a conversation. Just knowing you were there was enough.",
+        "I started visiting your tuition place just to see you, even if we didn’t talk. Sometimes you noticed. For me, even that was enough.",
     },
     {
-      title: "Kota Confession – The Message That Changed Everything 💌",
+      title: "Kota Days – Your Message 💌",
       icon: "📨",
       content:
-        "After Class 12, I moved to Kota to prepare for JEE. I had promised myself—no distractions. But suddenly, a message from Jayita changed everything: 'Paramita still likes you.' Then you messaged me yourself. You told me that you’d always felt something for me, too. That one message flipped my world around. We were finally together—officially.",
+        "After Class 12, I moved to Kota. Suddenly, a message came: 'Paramita still likes you.' Then you messaged me yourself. That day—we were finally together.",
     },
     {
-      title: "Distance & Disconnection 💔",
-      icon: "📚",
+      title: "Distance and Focus 📚",
+      icon: "📖",
       content:
-        "With JEE exams near, I told you we should talk less—maybe once or twice a week. You understood. And even though those moments were brief, they felt magical. But after the exams, you said we should go back to being friends. I was shattered. I couldn’t take it. I blocked you. Everything ended—again—in June 2023.",
+        "With JEE close, I asked to limit chats. You understood. Even short talks felt special. But after exams, you asked to go back to being friends. It hurt, and I couldn’t handle it. We drifted again.",
     },
     {
-      title: "The Message That Opened the Door Again 🔁",
+      title: "Rekindling – A Glimpse of Hope 💫",
+      icon: "🔁",
+      content:
+        "In late 2024, I texted: 'How are you?' We met on Ashtami, had coffee, and when you held my hand while crossing the road—I knew something still remained.",
+    },
+    {
+      title: "The January Message ❤️",
       icon: "📩",
       content:
-        "1.5 years later, around September or October 2024, I texted you: 'How are you?' Your reaction to the name Sureshtha said more than words ever could. I knew—some part of you still cared. On Ashtami, we met at a café. You held my hand while crossing the road. That one small moment told me everything. But when I proposed, you said no. I got angry. Said some things I shouldn’t have. Walked away, again.",
+        "You sent a message in Jan 2025, full of emotion and honesty. When you said, 'You matter to me after my parents,' I didn’t think twice—I accepted you again.",
     },
     {
-      title: "January 2025 – Your Honest Confession 💬",
-      icon: "📨",
+      title: "Saraswati Puja – Our First Real Date 🌸",
+      icon: "🌼",
       content:
-        "In January, you messaged me. A long, emotional, honest message. You apologized, opened your heart, and said: 'You are the only person who matters to me after my parents.' That line—it broke every wall I had built. You ended with: 'Will you accept me one last time?' I had no doubt. I said yes.",
+        "I gave you a rose and a letter. You glowed with happiness. It wasn’t just a date—it was a moment I’d dreamed of for years.",
     },
     {
-      title: "Saraswati Puja – Our First Real Date 🌼",
-      icon: "🌸",
-      content:
-        "This time, our bond was different—strong, real, and open. On Saraswati Puja, we met for our first real date. I gave you a rose and a letter—something I had never done for anyone before. You were glowing. I was watching you, wondering how someone could be so beautiful, so perfect, so mine.",
-    },
-    {
-      title: "Movie Date – Our First Kiss 💋",
-      icon: "🎬",
-      content:
-        "We went to see Shabba. I kissed you on your cheek, and you kissed me back. That day was filled with quiet smiles, warm glances, a tight hug, and our first forehead kiss. The kind of day you don’t just remember—you relive it in your heart, every single day.",
-    },
-    {
-      title: "Science City – A Thousand Kisses 💖",
+      title: "Movie Date – First Kiss 🎬",
       icon: "💋",
       content:
-        "When we met at Science City, I had missed you so much... I couldn't stop myself. I kissed you again and again—I don’t even remember the count. Each kiss felt like making up for all those silent years. Later, at a café, you gave me a flower—my first flower from a girl. My hands were shaking. My heart was full.",
+        "We watched Chhava that day. I kissed your cheek, and you kissed me back. We hugged, smiled, and sealed a beautiful memory with a forehead kiss.",
     },
     {
-      title: "Victoria Memorial – You, The Child in You 🎠",
+      title: "Science City – Day full of kisses 💖",
+      icon: "🎡",
+      content:
+        "I missed you so much that I couldn’t stop kissing you. Later, you gave me a flower, man kar raha tha itni kiss karu itna kiss karu",
+    },
+    {
+      title: "Victoria Memorial – Your Purest Self 🎠",
       icon: "🏰",
       content:
-        "At Victoria Memorial, you were playful, like a little child. Running, smiling, teasing me. I didn’t care about the place. I was busy capturing you—your joy, your silliness, your innocence. That version of you… I want to remember forever. It’s the most precious thing I’ve ever seen.",
+        "You were playful and innocent, like a little girl. I didn’t care about the monument—I was busy capturing the most real and beautiful version of you.",
     },
     {
-      title: "Our Nightly 11PM Calls 🌙",
+      title: "11 PM Calls – Our Little World 🌙",
       icon: "☎️",
       content:
-        "Despite strict parents, studies, work—every day, from 11PM to midnight—we find our little world. No matter what happened during the day, that one hour is my peace, my joy, my everything. No calls before that, no messages—just us, just that hour. That’s how I end every day—with you.",
+        "Every night from 11 to 12, we make time for each other. That one hour is my peace, my joy, my everything—because it’s ours.",
     },
     {
-      title: "A Love That Grew, Faded, and Found Its Way Back ❤️",
-      icon: "❤️",
+      title: "Our Love Story – The One That Stayed ❤️",
+      icon: "💞",
       content:
-        "From a teenage crush at tuition… to a silent balcony goodbye… from a blocked number… to countless kisses at Science City. From a rose on Saraswati Puja… to forehead kisses, and Victoria moments. From long silences to 11PM calls. Our story isn't about perfection—it's about growth, mistakes, forgiveness, and choosing each other again and again. This is not just love. This is us.",
+        "From teenage glances to real love, from silence to roses and kisses—our story is about two people who always found their way back. And this time, it’s forever.",
     },
   ];
   
-
   const nextStep = () => {
     if (currentStep < timelineSteps.length - 1) {
       setCurrentStep(currentStep + 1)

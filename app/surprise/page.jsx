@@ -1,97 +1,100 @@
 "use client";
 
-import Aloo1 from "../aloo/Aloo1.jpg";
-import Aloo2 from "../aloo/Aloo2.jpg";
-import Aloo3 from "../aloo/Aloo3.jpg";
-import Aloo4 from "../aloo/Aloo4.jpg";
-import Aloo15 from "../aloo/Aloo15.jpg";
-import Aloo16 from "../aloo/Aloo16.jpg";
-import Aloo17 from "../aloo/Aloo17.jpg";
-import Aloo18 from "../aloo/Aloo18.jpg";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import "./surprise.css";
 
 export default function SurprisePage() {
   const router = useRouter();
-  const [showAlert, setShowAlert] = useState(true);
-  const [photosLoaded, setPhotosLoaded] = useState(false);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
 
-  const photos = [Aloo1, Aloo2, Aloo3, Aloo4, Aloo15, Aloo16, Aloo17,Aloo18];
+  const photoMemories = [
+    {
+      src: "/aloo/Aloo1.jpg",
+      caption: "I promise I'll always love this kiddo",
+    },
+    {
+      src: "/aloo/Aloo2.jpg",
+      caption: "Heheee",
+    },
+    {
+      src: "/aloo/Aloo3.jpg",
+      caption:
+        "The first pic jisme we both are there.I used to see this pic whenever I missed you during lockdown",
+    },
+    {
+      src: "/aloo/Aloo4.jpg",
+      caption: "Meri pyari Aloo😚",
+    },
+    {
+      src: "/aloo/Aloo15.jpg",
+      caption: "You had no idea how cute you looked here",
+    },
+    {
+      src: "/aloo/Aloo16.jpg",
+      caption:
+        "Thank you so much for this, the first flower I recieved from you.",
+    },
+    {
+      src: "/aloo/Aloo17.jpg",
+      caption:
+        "This was your first photo I saw after July 15th, couldn't stop myself from smiling and talking a screenshot🥹",
+    },
+    { src: "/aloo/Aloo18.jpg",
+     caption: "Ekbar fir kabhi ye hairstyle me photo bhejo na yaar Aloo" 
+    },
+  ];
 
   useEffect(() => {
-    if (!showAlert) {
-      setTimeout(() => setPhotosLoaded(true), 500);
-    }
-  }, [showAlert]);
+    setTimeout(() => setImagesLoaded(true), 300);
+  }, []);
 
   return (
-    <div className="surprise-container">
-      {showAlert && (
-        <div className="birthday-alert">
-          <div className="alert-content">
-            <h1 className="alert-title">
-              🎉 Happy Birthday, My Beautiful Angel! 🎉
-            </h1>
-            <p className="alert-text">
-              Today marks another year of your incredible existence, and I
-              couldn't be more grateful to celebrate this special day with you.
-              You bring magic into every moment!
-            </p>
-            <button
-              className="alert-button"
-              onClick={() => setShowAlert(false)}
+    <div className="surprise-wrapper">
+      <section className="intro-section">
+        <h1 className="main-heading">🎉 Happy Birthday, Paramita 🎉</h1>
+        <p className="birthday-message">
+          I didn’t know how, when or why — but you slowly became a part of me.
+          From silly chats to quiet thoughts, you've stayed on my mind longer
+          than you’d believe. I never told you enough, but I genuinely like you.
+          You’re beautiful — inside and out — and your presence has made my days
+          warmer. On your birthday, I just want to say — you deserve the kind of
+          happiness you never have to question. Happy Birthday again, Aloo.
+          You're unforgettable.
+        </p>
+      </section>
+
+      <section className="photos-grid-section">
+        <h2 className="grid-title">Your Little Moments, My Big Memories 💛<br/>Tap to see small messages</h2>
+
+        <div className="photo-grid">
+          {photoMemories.map((photo, index) => (
+            <div
+              className={`photo-card ${imagesLoaded ? "loaded" : ""}`}
+              key={index}
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
-              Continue to My Surprise
-            </button>
-          </div>
-        </div>
-      )}
-
-      {!showAlert && (
-        <div className="photos-section">
-          <div className="magical-particles">
-            {[...Array(20)].map((_, i) => (
-              <div key={i} className={`sparkle sparkle-${i % 4}`}>
-                {["✨", "⭐", "💫", "🌟"][Math.floor(Math.random() * 4)]}
+              <img
+                src={photo.src}
+                alt={`memory-${index}`}
+                className="photo-img"
+              />
+              <div className="caption-overlay">
+                <p>{photo.caption}</p>
               </div>
-            ))}
-          </div>
-
-          <h2 className="photos-title">Precious Memories of You</h2>
-          <p className="photos-subtitle">
-            Each moment captured is a treasure in my heart
-          </p>
-
-          <div className="photos-grid">
-            {photos.map((photo, index) => (
-              <div
-                key={index}
-                className={`photo-card ${photosLoaded ? "loaded" : ""}`}
-                style={{ animationDelay: `${index * 0.15}s` }}
-              >
-                <img
-                  src={photo.src}
-                  alt={`Beautiful Memory ${index + 1}`}
-                  className="photo-image"
-                />
-                <div className="photo-overlay">
-                  <p className="overlay-text">Beautiful Memory #{index + 1}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="navigation-buttons">
-            <button
-              className="nav-button"
-              onClick={() => router.push("/timeline")}
-            >
-              Our Love Story →
-            </button>
-          </div>
+            </div>
+          ))}
         </div>
-      )}
+      </section>
+
+      <div className="next-button-container">
+        <button
+          className="next-button"
+          onClick={() => router.push("/timeline")}
+        >
+          Next →
+        </button>
+      </div>
     </div>
   );
 }

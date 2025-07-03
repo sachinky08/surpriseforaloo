@@ -12,47 +12,54 @@ export default function FavoritesPage() {
   const favoritePhotos = [
     {
       src: "/aloo/Aloo5.jpg",
-      caption: "Your beautiful smile that lights up my entire world",
+      caption: "I’ve kissed this photo more times than I ever got to kiss you.",
       mood: "joy",
     },
     {
       src: "/aloo/Aloo6.jpg",
-      caption: "The way you laugh at my silly jokes makes everything perfect",
+      caption:
+        "You looked so beautiful that day even though I wasn’t there, I can almost feel the moment.The colors, your calm smile",
       mood: "happiness",
     },
     {
       src: "/aloo/Aloo7.jpg",
-      caption: "Your eyes that hold all the stars in the universe",
+      caption:
+        "This kurti looks so good on you, it’s like it was made for you, And uspe victoria piche, Chaar chaand",
       mood: "wonder",
     },
     {
       src: "/aloo/Aloo8.jpg",
-      caption: "The moment you said yes to forever with me",
+      caption:
+        "I've mentioned the day you posted this pic that you look so graceful in here, phone me ghus ke kiss karne ka man kar raha tha",
       mood: "love",
     },
     {
       src: "/aloo/Aloo9.jpg",
-      caption: "Dancing in the rain together, pure magic",
+      caption: "Aloo kahi ki, kitni pyari ho yaar, I can’t even describe it.",
       mood: "romance",
     },
     {
       src: "/aloo/Aloo10.jpg",
-      caption: "Your peaceful face while sleeping, my guardian angel",
+      caption:
+        "Someone commented 'Pink Saraswati' on this post and she was nothing wrong, glad that pic was clicked by me.LOve you aloo",
       mood: "peace",
     },
     {
       src: "/aloo/Aloo11.jpg",
-      caption: "Holding hands, walking nowhere, just together",
+      caption:
+        "The day when you became a child, I felt like recording each and every moment of my Aloo.",
       mood: "togetherness",
     },
     {
       src: "/aloo/Aloo12.jpg",
-      caption: "Every moment with you is a beautiful memory",
+      caption:
+        "There's a folder named 'Memories' in my phone, this was the first photo I added to it, and it still makes me smile every time I see it.",
       mood: "nostalgia",
     },
     {
       src: "/aloo/Aloo13.jpg",
-      caption: "The way you look at me makes me feel infinite",
+      caption:
+        "I kissed you on your aloo jaise cheeks and you kissed me back. Itne butterflies kabhi nahi aaye thay. Also I hugged you for the first time, and it felt like home.",
       mood: "eternity",
     },
   ];
