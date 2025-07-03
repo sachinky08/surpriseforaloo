@@ -1,53 +1,70 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { useRouter } from "next/navigation"
-import "./favorites.css"
+import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
+import "./favorites.css";
 
 export default function FavoritesPage() {
-  const router = useRouter()
-  const [photosLoaded, setPhotosLoaded] = useState(false)
-  const [selectedPhoto, setSelectedPhoto] = useState(null)
+  const router = useRouter();
+  const [photosLoaded, setPhotosLoaded] = useState(false);
+  const [selectedPhoto, setSelectedPhoto] = useState(null);
 
   const favoritePhotos = [
     {
-      src: "/placeholder.svg?height=500&width=500",
+      src: "/aloo/Aloo5.jpg",
       caption: "Your beautiful smile that lights up my entire world",
       mood: "joy",
     },
     {
-      src: "/placeholder.svg?height=500&width=500",
+      src: "/aloo/Aloo6.jpg",
       caption: "The way you laugh at my silly jokes makes everything perfect",
       mood: "happiness",
     },
     {
-      src: "/placeholder.svg?height=500&width=500",
+      src: "/aloo/Aloo7.jpg",
       caption: "Your eyes that hold all the stars in the universe",
       mood: "wonder",
     },
     {
-      src: "/placeholder.svg?height=500&width=500",
+      src: "/aloo/Aloo8.jpg",
       caption: "The moment you said yes to forever with me",
       mood: "love",
     },
     {
-      src: "/placeholder.svg?height=500&width=500",
+      src: "/aloo/Aloo9.jpg",
       caption: "Dancing in the rain together, pure magic",
       mood: "romance",
     },
     {
-      src: "/placeholder.svg?height=500&width=500",
+      src: "/aloo/Aloo10.jpg",
       caption: "Your peaceful face while sleeping, my guardian angel",
       mood: "peace",
     },
-  ]
+    {
+      src: "/aloo/Aloo11.jpg",
+      caption: "Holding hands, walking nowhere, just together",
+      mood: "togetherness",
+    },
+    {
+      src: "/aloo/Aloo12.jpg",
+      caption: "Every moment with you is a beautiful memory",
+      mood: "nostalgia",
+    },
+    {
+      src: "/aloo/Aloo13.jpg",
+      caption: "The way you look at me makes me feel infinite",
+      mood: "eternity",
+    },
+  ];
 
   useEffect(() => {
-    setTimeout(() => setPhotosLoaded(true), 800)
-  }, [])
+    const timer = setTimeout(() => setPhotosLoaded(true), 800);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className="favorites-container">
+      {/* Floating aura elements */}
       <div className="magical-aura">
         {[...Array(25)].map((_, i) => (
           <div
@@ -63,13 +80,16 @@ export default function FavoritesPage() {
         ))}
       </div>
 
+      {/* Header */}
       <div className="favorites-header">
         <h1 className="header-title">My Favorite Aloo</h1>
         <p className="header-text">
-          Every picture tells a story of how much you mean to me, each moment a treasure in my heart
+          Every picture tells a story of how much you mean to me, each moment a
+          treasure in my heart
         </p>
       </div>
 
+      {/* Photo Gallery */}
       <div className="photos-gallery">
         {favoritePhotos.map((photo, index) => (
           <div
@@ -77,8 +97,15 @@ export default function FavoritesPage() {
             className={`photo-item ${photosLoaded ? "loaded" : ""}`}
             style={{ animationDelay: `${index * 0.15}s` }}
           >
-            <div className="photo-frame" onClick={() => setSelectedPhoto(photo)}>
-              <img src={photo.src || "/placeholder.svg"} alt={`Favorite moment ${index + 1}`} className="photo-image" />
+            <div
+              className="photo-frame"
+              onClick={() => setSelectedPhoto(photo)}
+            >
+              <img
+                src={photo.src}
+                alt={`Favorite moment ${index + 1}`}
+                className="photo-image"
+              />
               <div className="photo-caption">
                 <p className="caption-text">{photo.caption}</p>
               </div>
@@ -87,16 +114,18 @@ export default function FavoritesPage() {
         ))}
       </div>
 
+      {/* Navigation Button */}
       <div className="navigation-section">
-        <button className="nav-button" onClick={() => router.push("/carousel")}>
-          View Magical Carousel →
+        <button className="nav-button" onClick={() => router.push("/confession")}>
+          Some small confessions →
         </button>
       </div>
 
+      {/* Modal */}
       {selectedPhoto && (
         <div className="photo-modal" onClick={() => setSelectedPhoto(null)}>
           <img
-            src={selectedPhoto.src || "/placeholder.svg"}
+            src={selectedPhoto.src}
             alt="Selected memory"
             className="modal-image"
             onClick={(e) => e.stopPropagation()}
@@ -104,5 +133,5 @@ export default function FavoritesPage() {
         </div>
       )}
     </div>
-  )
+  );
 }
