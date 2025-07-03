@@ -574,7 +574,7 @@ export default function CountdownPage() {
                 className="modal-button"
                 onClick={() => setShowModal(false)}
               >
-                I'll Wait With Love
+                Ok...I'll Wait
               </button>
             </div>
           </div>
