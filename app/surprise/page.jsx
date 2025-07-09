@@ -38,7 +38,7 @@ export default function SurprisePage() {
     {
       src: "/aloo/Aloo17.jpg",
       caption:
-        "This was your first photo I saw after July 15th, couldn't stop myself from smiling and talking a screenshot🥹",
+        "This was your first photo I saw after July 15th, couldn't stop myself from smiling and taking a screenshot🥹",
     },
     { src: "/aloo/Aloo18.jpg",
      caption: "Ekbar fir kabhi ye hairstyle me photo bhejo na yaar Aloo" 

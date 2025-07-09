@@ -118,7 +118,7 @@ export default function TimelinePage() {
       </div>
 
       <div className="timeline-header">
-        <h1 className="timeline-title">Our Magical Love Story</h1>
+        <h1 className="timeline-title">If some day, a person asks me-which love story you admire the most?<br/>I won't think twice</h1>
         <p className="timeline-subtitle">Every chapter written with love, every moment a precious memory</p>
       </div>
 

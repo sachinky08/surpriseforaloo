@@ -94,6 +94,10 @@ export default function FavoritesPage() {
           Every picture tells a story of how much you mean to me, each moment a
           treasure in my heart
         </p>
+        <h2 className="grid-title">
+          <br />
+          Tap to see small messages
+        </h2>
       </div>
 
       {/* Photo Gallery */}
@@ -123,7 +127,10 @@ export default function FavoritesPage() {
 
       {/* Navigation Button */}
       <div className="navigation-section">
-        <button className="nav-button" onClick={() => router.push("/confession")}>
+        <button
+          className="nav-button"
+          onClick={() => router.push("/confession")}
+        >
           Some small confessions →
         </button>
       </div>
