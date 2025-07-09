@@ -1,5 +1,4 @@
 "use client";
-
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import "./favorites.css";
@@ -8,23 +7,24 @@ export default function FavoritesPage() {
   const router = useRouter();
   const [photosLoaded, setPhotosLoaded] = useState(false);
   const [selectedPhoto, setSelectedPhoto] = useState(null);
+  const [activePhotoIndex, setActivePhotoIndex] = useState(null);
 
   const favoritePhotos = [
     {
       src: "/aloo/Aloo5.jpg",
-      caption: "I’ve kissed this photo more times than I ever got to kiss you.",
+      caption: "I've kissed this photo more times than I ever got to kiss you.",
       mood: "joy",
     },
     {
       src: "/aloo/Aloo6.jpg",
       caption:
-        "You looked so beautiful that day even though I wasn’t there, I can almost feel the moment.The colors, your calm smile",
+        "You looked so beautiful that day even though I wasn't there, I can almost feel the moment. The colors, your calm smile",
       mood: "happiness",
     },
     {
       src: "/aloo/Aloo7.jpg",
       caption:
-        "This kurti looks so good on you, it’s like it was made for you, And uspe victoria piche, Chaar chaand",
+        "This kurti looks so good on you, it's like it was made for you, And uspe victoria piche, Chaar chaand",
       mood: "wonder",
     },
     {
@@ -35,13 +35,13 @@ export default function FavoritesPage() {
     },
     {
       src: "/aloo/Aloo9.jpg",
-      caption: "Aloo kahi ki, kitni pyari ho yaar, I can’t even describe it.",
+      caption: "Aloo kahi ki, kitni pyari ho yaar, I can't even describe it.",
       mood: "romance",
     },
     {
       src: "/aloo/Aloo10.jpg",
       caption:
-        "Someone commented 'Pink Saraswati' on this post and she was nothing wrong, glad that pic was clicked by me.LOve you aloo",
+        "Someone commented 'Pink Saraswati' on this post and she was nothing wrong, glad that pic was clicked by me. Love you aloo",
       mood: "peace",
     },
     {
@@ -69,6 +69,20 @@ export default function FavoritesPage() {
     return () => clearTimeout(timer);
   }, []);
 
+  const handlePhotoClick = (photo, index) => {
+    if (window.innerWidth <= 768) {
+      // On mobile, toggle caption visibility
+      setActivePhotoIndex(activePhotoIndex === index ? null : index);
+    } else {
+      // On desktop, open modal
+      setSelectedPhoto(photo);
+    }
+  };
+
+  const handlePhotoDoubleClick = (photo) => {
+    setSelectedPhoto(photo);
+  };
+
   return (
     <div className="favorites-container">
       {/* Floating aura elements */}
@@ -95,8 +109,12 @@ export default function FavoritesPage() {
           treasure in my heart
         </h2>
         <p className="grid-title">
-          <br />
-          Each photo wants to tell you something, tap ya fir hover karo
+          <span className="desktop-instruction">
+            Each photo wants to tell you something, hover to see the message
+          </span>
+          <span className="mobile-instruction">
+            Each photo wants to tell you something, tap to see the message
+          </span>
         </p>
       </div>
 
@@ -105,20 +123,23 @@ export default function FavoritesPage() {
         {favoritePhotos.map((photo, index) => (
           <div
             key={index}
-            className={`photo-item ${photosLoaded ? "loaded" : ""}`}
+            className={`photo-item ${photosLoaded ? "loaded" : ""} ${
+              activePhotoIndex === index ? "active-mobile" : ""
+            }`}
             style={{ animationDelay: `${index * 0.15}s` }}
           >
             <div
               className="photo-frame"
-              onClick={() => setSelectedPhoto(photo)}
+              onClick={() => handlePhotoClick(photo, index)}
+              onDoubleClick={() => handlePhotoDoubleClick(photo)}
             >
               <img
-                src={photo.src}
+                src={photo.src || "/placeholder.svg"}
                 alt={`Favorite moment ${index + 1}`}
                 className="photo-image"
               />
               <div className="photo-caption">
-                <p className="caption-overlay">{photo.caption}</p>
+                <p className="caption-text">{photo.caption}</p>
               </div>
             </div>
           </div>
@@ -138,12 +159,24 @@ export default function FavoritesPage() {
       {/* Modal */}
       {selectedPhoto && (
         <div className="photo-modal" onClick={() => setSelectedPhoto(null)}>
-          <img
-            src={selectedPhoto.src}
-            alt="Selected memory"
-            className="modal-image"
-            onClick={(e) => e.stopPropagation()}
-          />
+          <div className="modal-content">
+            <img
+              src={selectedPhoto.src || "/placeholder.svg"}
+              alt="Selected memory"
+              className="modal-image"
+              onClick={(e) => e.stopPropagation()}
+            />
+            <div className="modal-caption">
+              <p className="modal-caption-text">{selectedPhoto.caption}</p>
+            </div>
+            <button
+              className="modal-close"
+              onClick={() => setSelectedPhoto(null)}
+              aria-label="Close modal"
+            >
+              ×
+            </button>
+          </div>
         </div>
       )}
     </div>
