@@ -90,14 +90,14 @@ export default function FavoritesPage() {
       {/* Header */}
       <div className="favorites-header">
         <h1 className="header-title">My Favorite Aloo</h1>
-        <p className="header-text">
+        <h2 className="header-text">
           Every picture tells a story of how much you mean to me, each moment a
           treasure in my heart
-        </p>
-        <h2 className="grid-title">
-          <br />
-          Tap to see small messages
         </h2>
+        <p className="grid-title">
+          <br />
+          Each photo wants to tell you something, tap ya fir hover karo
+        </p>
       </div>
 
       {/* Photo Gallery */}
@@ -118,7 +118,7 @@ export default function FavoritesPage() {
                 className="photo-image"
               />
               <div className="photo-caption">
-                <p className="caption-text">{photo.caption}</p>
+                <p className="caption-overlay">{photo.caption}</p>
               </div>
             </div>
           </div>

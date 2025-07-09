@@ -25,7 +25,7 @@ const confessions = [
   "Even now, I wait for 11 PM every night. No matter what the day was, hearing your voice makes it home again.",
   "You’ve always been my favorite hello, my hardest silence, and my most beautiful return.",
   "After those chats at 11 PM, I often kiss your photo and realise how cute my girlfriend is.",
-  "*This one in hindi*- Hote honge logo ke chehta cetaphil lagane se glow, but mera toh tumhari ek jhalak ya kehlo ek message se hi ho jata hai",
+  "*This one in hindi*- Hote honge logo ke chehre cetaphil lagane se glow, but mera toh tumhari ek jhalak ya kehlo ek message se hi ho jata hai",
   "If I'm even totally mad or angry on you, I would still always care for you."
 ];
 
@@ -65,7 +65,7 @@ export default function ConfessionPage() {
 
         {index < confessions.length - 1 && (
           <button className="next-button" onClick={handleNext}>
-            Next Confession ❤️
+            Next one
           </button>
         )}
       </div>
